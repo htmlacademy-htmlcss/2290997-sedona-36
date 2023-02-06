@@ -3,7 +3,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-
   src:
     url("../fonts/ptsans-400.woff2") format("woff2"),
   }
@@ -13,7 +12,6 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-
   src:
     url("../fonts/ptsans-700.woff2") format("woff2"),
   }
@@ -23,11 +21,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "PT Sans", sans-serif;
-  margin: 0;
 }
 
 .visually-hidden {
@@ -47,11 +40,178 @@ body {
   clip-path: inset(100%);
 }
 
-
 li {
   list-style-type: none;
   }
 
 ul {
   padding-left: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+  color: #000000;
+  background-color: #f2f2f2;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  padding: 8px 50px;
+  border: none;
+}
+
+.button-blue {
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.button-brown {
+  background-color: rgba(117, 97, 87, 1);
+}
+
+.button-green {
+  background-color: rgba(125, 181, 79, 1);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+  display: flex;
+  padding: 0 70px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.navigation-user {
+  align-items: flex-end;
+}
+
+.navigation-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-list .button {
+  color: #ffffff;
+}
+
+.intro {
+  color: #ffffff;
+  background-color: #467aa4;
+  background-image: url("../images/backgrounds/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.intro-welcome {
+  margin-top: 51px;
+  margin-bottom: 82px;
+}
+
+.advantages {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 103px 85px;
+}
+
+.advantages-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages-card {
+  background-color: #82B3D3;
+}
+
+.advantages-description{
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.background-n {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.background-2n {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.offers {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.offers-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.search{
+  background-color: #ffffff;
+  text-align: center;
+  padding: 96px 304px;
+}
+
+.subscription {
+  color: #ffffff;
+  background-color: #467aa4;
+  background-image: url("../images/backgrounds/subscribe.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 258px 104px;
+  gap: 10px;
+}
+
+.page-footer {
+  background-color: #ffffff;
 }
