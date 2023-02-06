@@ -106,7 +106,7 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-title, .offers-card-title, {
+.advantages-title, .offers-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -165,10 +165,10 @@ body {
 
 .cards {
   display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 103px 85px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 103px 85px;
 }
 
 .advantages-card {
@@ -239,7 +239,6 @@ padding: 103px 85px;
 .breadcrumbs {
   display: flex;
   flex-direction: row;
-  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
 }
@@ -264,13 +263,11 @@ padding: 103px 85px;
 }
 
 .catalog-filter-list {
-  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
 }
 
 .price-inbox {
-  font-weight: 400;
   font-size: 18px;
   line-height: 23px;
 }
@@ -315,14 +312,12 @@ padding: 103px 85px;
 
 .product-card-text,
 .product-card-price {
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
 
 .rating {
   color: #000000;
-  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
