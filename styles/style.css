@@ -98,7 +98,7 @@ body {
 }
 
 .advantages-headline {
-  padding: 69px 275px 69px 275px;
+  padding: 69px 275px;
 }
 
 .advantages-head {
@@ -145,6 +145,10 @@ body {
 .offers {
   background-color: #ffffff;
   text-align: center;
+}
+
+.offers-headline {
+  padding: 64px 347px;
 }
 
 .offers-head {
