@@ -109,10 +109,9 @@ body {
 }
 
 .advantages-card-content {
-  display: flex;
-  flex-direction: column;
   padding: 102px 85px;
   background-color: #82B3D3;
+  color: #ffffff;
 }
 
 .advantages-item {
@@ -407,8 +406,6 @@ body {
   padding: 8px 50px;
   border: none;
   border-radius: 4px;
-  width: auto;
-  height: auto;
 }
 
 .button-blue {
