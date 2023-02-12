@@ -10,9 +10,9 @@
 
   <body>
     <div class="page-wrapper">
-      <header data-test="header" class="page-header">
+      <header class="page-header" data-test="header">
         <a class="page-header-logo" href="index.html">
-          <img src="images\icons\logo.svg" alt="Логотип Седоны." width="140" height="70">
+          <img class="navigation-logo" src="images\icons\logo.svg" alt="Логотип Седоны.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -23,7 +23,7 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link  navigation-link-current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
@@ -34,7 +34,7 @@
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden ">Избранное.</span>
+                <span class="visually-hidden">Избранное.</span>
               </a>
             </li>
             <li class="navigation-item">
@@ -44,7 +44,7 @@
         </nav>
       </header>
 
-      <main data-test="main" class="main-inner">
+      <main data-test="main" class="main-inner main-index">
         <section class="search-form">
           <header class="search-form-header">
             <h1 class="inner-header">Гостиницы Седоны</h1>
@@ -86,7 +86,7 @@
         </fieldset>
 
         <fieldset class="catalog-filter-group">
-          <legend class="legend-title">Тип жилья:</legend>
+          <legend class="legend-title">Тип Жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="infrastructure">
@@ -140,12 +140,12 @@
       </section>
         <section class="catalog" data-test="catalog">
           <h2 class="visually-hidden">Результаты поиска.</h2>
-          <div>
+          <div class="catalog-headline">
             <span class="catalog-total">Найдено гостиниц: 38</span>
             <select class="select-control" aria-label="Сортировка">
-              <option value="popular">Сначала популярное</option>
-              <option value="cheap" selected>Сначала дешёвое</option>
-              <option value="expensive">Сначала дорогое</option>
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
             </select>
             <ul class="list-preview">
               <li>
@@ -171,8 +171,10 @@
                 <img class="product-card-image" src="images\content\amara-resort.png" alt="Amara Resort & Spa." width="300" height="212">
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
               </a>
-              <p class="product-card-text">Гостиница</p>
-              <p class="product-card-price">От 4000&nbsp;₽</p>
+              <div class="product-card-description">
+                <p class="product-card-text">Гостиница</p>
+                <p class="product-card-price">От 4000&nbsp;₽</p>
+              </div>
               <a class="product-card-button button button-brown" href="#">Подробнее</a>
               <button class="product-card-button button button-blue">В избранное</button>
               <p class="stars star-4">
@@ -186,8 +188,10 @@
                 <img class="product-card-image" src="images\content\villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo." width="300" height="212">
                 <h3 class="product-card-title">Villas at Poco Diablo</h3>
               </a>
-              <p class="product-card-text">Гостиница</p>
-              <p class="product-card-price">От 5000&nbsp;₽</p>
+              <div class="product-card-description">
+                <p class="product-card-text">Гостиница</p>
+                <p class="product-card-price">От 5000&nbsp;₽</p>
+              </div>
               <a class="product-card-button button button-brown" href="#">Подробнее</a>
               <button class="product-card-button button button-green">В избранном</button>
               <p class="stars star-4">
@@ -201,8 +205,10 @@
                 <img class="product-card-image" src="images\content\desert-quail.jpg" alt="Desert Quail Inn." width="300" height="212">
                 <h3 class="product-card-title">Desert Quail Inn</h3>
               </a>
-              <p class="product-card-text">Гостиница</p>
-              <p class="product-card-price">От 2500&nbsp;₽</p>
+              <div class="product-card-description">
+                <p class="product-card-text">Гостиница</p>
+                <p class="product-card-price">От 2500&nbsp;₽</p>
+              </div>
               <a class="product-card-button button button-brown" href="#">Подробнее</a>
               <button class="product-card-button button button-blue">В избранное</button>
               <p class="stars star-3">
@@ -216,8 +222,10 @@
                 <img class="product-card-image" src="images\content\greentree.jpg" alt="GreenTree Inn." width="300" height="212">
                 <h3 class="product-card-title">GreenTree Inn</h3>
               </a>
-              <p class="product-card-text">Гостиница</p>
-              <p class="product-card-price">От 1500&nbsp;₽</p>
+              <div class="product-card-description">
+                <p class="product-card-text">Гостиница</p>
+                <p class="product-card-price">От 1500&nbsp;₽</p>
+              </div>
               <a class="product-card-button button button-brown" href="#">Подробнее</a>
               <button class="product-card-button button button-blue">В избранное</button>
               <p class="stars star-2">
