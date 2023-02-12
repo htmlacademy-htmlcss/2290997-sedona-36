@@ -458,12 +458,16 @@ body {
   margin: 0;
 }
 
+.product-card-image {
+  margin: 0 0 16px 0;
+}
+
 .product-card-title {
   color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  margin: 16px 0;
+  margin: 0 0 16px 0;
 }
 
 .product-card-content {
