@@ -84,7 +84,6 @@ body {
 }
 
 .navigation-list {
-  min-width: 339px;
   display: flex;
   list-style: none;
   margin: 0;
@@ -94,7 +93,8 @@ body {
 }
 
 .navigation-user {
-  min-width: 268px;
+  display: flex;
+  justify-content: end;
   margin-left: auto;
 }
 
@@ -105,11 +105,11 @@ body {
   text-align: center;
   color: inherit;
   text-decoration: none;
+  padding: 20px 16px;
 }
 
-.navigation-item {
-  padding-left: 16px;
-  padding-right: 16px;
+.navigation-item .button {
+  margin-left: 20px;
 }
 
 .main-index {
@@ -310,6 +310,10 @@ body {
 
 .subscription-form input {
   font-family: inherit;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 4px 0 0 4px;
+  width: 452px;
 }
 
 .subscription-title {
@@ -322,6 +326,15 @@ body {
 
 .subscription-caption {
   margin: 0 0 54px 0;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscription-form .button {
+  border-radius: 0 4px 4px 0;
 }
 
 .search-form {
@@ -396,7 +409,7 @@ body {
 .form-control {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 }
 
 .catalog {
@@ -417,6 +430,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .select-control {
@@ -441,12 +455,14 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
 }
 
 .product-card {
+  width: 340px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -473,7 +489,7 @@ body {
 .product-card-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 16px 20px;
 }
 
 .product-card-text {
@@ -507,8 +523,11 @@ body {
   margin: 0;
   background-color: #ffffff;
   display: flex;
-  gap: 8px;
   margin-top: 80px;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-link {
