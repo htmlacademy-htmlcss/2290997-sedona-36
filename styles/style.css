@@ -55,8 +55,6 @@ body {
 }
 
 .page-wrapper {
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
   width: 1200px;
   margin: 0 auto;
@@ -85,6 +83,7 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -94,6 +93,7 @@ body {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
   margin-left: auto;
 }
@@ -198,7 +198,7 @@ body {
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .offers {
@@ -227,7 +227,7 @@ body {
   margin: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 400px);
 }
 
 .offers-card-title {
@@ -325,16 +325,17 @@ body {
 }
 
 .subscription-caption {
-  margin: 0 0 54px 0;
+  margin: 0 auto 54px auto;
+  max-width: 480px;
 }
 
 .subscription-form {
   display: flex;
-  justify-content: center;
 }
 
 .subscription-form .button {
   border-radius: 0 4px 4px 0;
+  flex-grow: 1;
 }
 
 .search-form {
@@ -355,6 +356,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   font-size: 18px;
   line-height: 23px;
   list-style: none;
@@ -446,6 +448,7 @@ body {
 
 .list-preview {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -453,16 +456,15 @@ body {
 
 .product-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 40px 0;
+  margin: 0 0 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .product-card {
-  width: 340px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -496,6 +498,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+  color: #333333;
 }
 
 .product-card-price {
@@ -503,17 +506,20 @@ body {
   line-height: 21px;
   margin: 0;
   justify-self: end;
+  color: #333333;
+
 }
 
 .product-card .rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
+  color: #333333;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0;
+}
+
+.stars {
   margin: 0;
 }
 
@@ -523,7 +529,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   display: flex;
-  margin-top: 80px;
+  flex-wrap: wrap;
 }
 
 .pagination-item:not(:last-child) {
@@ -563,10 +569,11 @@ body {
 }
 
 .button {
+  display: inline-flex;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  text-align: center;
+  justify-content: center;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -610,6 +617,7 @@ body {
 .social-media {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .phone-link {
