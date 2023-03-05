@@ -126,18 +126,59 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.navigation-icon {
-  display: block;
-  background-position: center;
-  margin: auto;
+.user-navigation-link {
+  display: flex;
+  position: relative;
+  min-width: 44px;
+  min-height: 64px;
 }
 
-.navigation-icon:hover {
+.user-navigation-link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+}
+
+.navigation-link-search::before {
+  width: 19px;
+  height: 19px;
+  background-image: url("../images/icons/search.svg");
+}
+
+.navigation-link-favourites::before {
+  width: 18px;
+  height: 17px;
+  background-image: url("../images/icons/heart.svg");
+}
+
+.navigation-link-favourites::after {
+  content: attr(data-favourites);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 4px;
+  position: absolute;
+  min-width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 10px;
+  background: #7bd54f;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.user-navigation-link:hover {
   opacity: 0.6;
 }
 
-.navigation-icon:active {
-  opacity: 0.6;
+.user-navigation-link:active {
+  opacity: 0.3;
 }
 
 .navigation-link-current {
@@ -243,18 +284,19 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  margin: 0 0 30px 0;
+  margin: 0 0 62px 0;
+  position: relative;
 }
 
 .advantages-title::after {
-  display: block;
+  position: absolute;
   background: rgba(0, 0, 0, 0.3);
   content: "";
   width: 60px;
   height: 2px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .advantages-card-content .advantages-title::after {
@@ -320,49 +362,44 @@ body {
 
 .offers-card {
   background-color: rgba(131, 179, 211, 0.12);
-  padding: 81px 85px;
+  padding: 183px 85px 81px 85px;
   min-height: 385px;
+  position: relative;
 }
 
 .offers-card:nth-child(even) {
   background-color: #ffffff;
 }
 
-.offers-card-live::before {
-  display: block;
+.offers-card::before {
   content: "";
+  position: absolute;
+  top: 81px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+}
+
+.offers-card-live::before {
   width: 75px;
   height: 72px;
   background-image: url("../images/icons/home.svg");
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  top: 81px;
 }
 
 .offers-card-food::before {
-  content: "";
-  display: block;
   width: 74px;
   height: 70px;
   background-image: url("../images/icons/food.svg");
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  top: 82px;
 }
 
 .offers-card-souvenirs::before {
-  content: "";
-  display: block;
   width: 64px;
   height: 76px;
   background-image: url("../images/icons/gift.svg");
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-
+  top: 81px;
 }
 
 .search{
@@ -398,7 +435,10 @@ body {
   border: none;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
-  width: 452px;
+  padding: 14px 20px;
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .subscription-title {
@@ -620,6 +660,10 @@ body {
   border: 2px solid #000000;
 }
 
+.button-preview:focus {
+  border: 2px solid #68a2ca;
+}
+
 .button-preview:active {
   border: 2px solid #000000;
 }
@@ -708,20 +752,32 @@ body {
 }
 
 .stars {
-  display: block;
-  background-image: url("../image/style/star.svg");
-  background-size: 24px 17px;
-  background-repeat: repeat-x;
-  background-position: center;
-  margin: 0;
+  background-image: url("../images/icons/stars.svg");
+  height: 20px;
+  width: 24px;
+  align-self: center;
+  background-repeat: space;
+  background-position: center left;
+}
+
+.star-1 {
+  width: 1em;
+}
+
+.star-2 {
+  width: 2em;
 }
 
 .star-3 {
-  background-size: 3em 17px;
+  width: 3em;
 }
 
 .star-4 {
-  background-size: 4em 17px;
+  width: 4em;
+}
+
+.star-5 {
+  width: 5em;
 }
 
 .pagination {
@@ -753,11 +809,11 @@ body {
   padding: 12px;
 }
 
-.pagination-link:not(.pagination-current,.pagination-next):hover {
+.pagination-link:hover {
   background-color: #68a2ca;
 }
 
-.pagination-link:not(.pagination-current):active {
+.pagination-link:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -765,11 +821,13 @@ body {
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+  pointer-events: none;
 }
 
-.pagination-next {
+.pagination-divider {
   color: #000000;
   background-color: #ffffff;
+  pointer-events: none;
 }
 
 .subscription-inner {
@@ -784,6 +842,7 @@ body {
   line-height: 20px;
   font-weight: 700;
   justify-content: center;
+  align-items: center;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -808,6 +867,11 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-blue:focus {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-brown {
   background-color: #756157;
 }
@@ -821,6 +885,11 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-brown:focus {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-green {
   background-color: #7db54f;
 }
@@ -830,6 +899,11 @@ body {
 }
 
 .button-green:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-green:focus {
   background-color: #7db54f;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -881,8 +955,11 @@ body {
 
 .social-media-link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   color: #83b3d3;
-  padding: 12px 11px;
+  width: 47px;
+  height: 40px;
 }
 
 .social-media-link:hover {
