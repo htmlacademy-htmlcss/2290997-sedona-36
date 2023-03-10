@@ -81,6 +81,14 @@ body {
   z-index: 1;
 }
 
+.page-header-logo:hover {
+  opacity: 0.8;
+}
+
+.page-header-logo:active {
+  opacity: 0.6;
+}
+
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -211,7 +219,6 @@ body {
   color: #ffffff;
   background-color: #467aa4;
   width: 1200px;
-  height: 485px;
   background-image: url("../images/backgrounds/index-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -273,7 +280,6 @@ body {
 
 .advantages-photo {
   width: 800px;
-  height: 385px;
 }
 
 .advantages-item {
@@ -480,7 +486,6 @@ body {
 
 .search-form {
   width: 1200px;
-  height: 412px;
   color: #ffffff;
   background-color: #467aa4;
   background-image: url("../images/backgrounds/filter.png");
@@ -542,7 +547,9 @@ body {
 }
 
 .catalog-filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 150px 358px 191px;
+  gap: 70px;
 }
 
 .catalog-filter-group {
@@ -551,17 +558,9 @@ body {
   margin: 0;
 }
 
-.catalog-filter-infrastructure {
-  margin-right: 70px;
-}
-
-.catalog-filter-type {
-  margin-right: 140px;
-}
-
 .catalog-filter-price {
-  margin-right: 70px;
   max-width: 288px;
+  padding-left: 70px;
 }
 
 .legend-title {
@@ -586,7 +585,7 @@ body {
 
 .hotels-price-group {
   display: flex;
-  margin-bottom: 44px;
+  margin-bottom: 32px;
 }
 
 .input-price {
@@ -597,7 +596,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 12px 20px;
+  padding: 12px 45px 12px 20px;
   width: 143px;
   height: 48px;
   border: none;
@@ -618,39 +617,52 @@ body {
 }
 
 .price-label {
-  position: absolute;
-  content: "";
   color: rgba(0, 0, 0, 0.3);
-
+  position: relative;
+  display: flex;
 }
 
-.input-price::-webkit-inner-spin-button,
-.input-price::-webkit-outer-spin-button {
-  appearance: none;
-  margin: 0;
+.price-label span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
 }
 
 .range-scale {
   position: relative;
+  display: flex;
+  width: 100%;
+  z-index: 1;
+}
+
+.range-scale::before,
+.range-scale::after {
+  content: "";
+  position: absolute;
   height: 4px;
-  width: 287px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(50%);
+  z-index: -1;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.range-bar {
-  position: absolute;
-  height: 4px;
+.range-scale::after {
+  width: 207px;
   background-color: #ffffff;
 }
 
 .range-toggle {
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 20px;
   background: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  top: 5px;
 }
 
 .range-toggle:hover {
@@ -659,17 +671,11 @@ body {
 
 .range-toggle:active,
 .range-toggle:focus {
-  outline: 3px solid rgba(0, 0, 0, 0.3);
-}
-
-.toggle-min {
-  top: -8px;
-  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .toggle-max {
-  top: -8px;
-  right: -10px;
+  transform: translateX(187px);
 }
 
 .control {
@@ -690,6 +696,11 @@ body {
 
 .control:hover .control-mark {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
 }
 
 .control-input:disabled + .control-mark {
@@ -733,6 +744,9 @@ body {
 
 .form-control .button {
   min-width: 191px;
+}
+
+.form-control .button-submit {
   margin-bottom: 32px;
 }
 
@@ -862,7 +876,19 @@ body {
   margin: 0;
 }
 
+.product-card-link:hover {
+  opacity: 0.8;
+}
+
+.product-card-link:active {
+  opacity: 0.6;
+}
+.product-card-link:focus {
+  opacity: 0.6;
+}
+
 .product-card-image {
+  padding: 0;
   margin: 0 0 16px 0;
 }
 
@@ -903,6 +929,7 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
+  cursor: auto;
 }
 
 .stars {
@@ -1169,6 +1196,7 @@ body {
   display: none;
 }
 
+
 .modal {
   position: relative;
   margin: auto;
@@ -1176,9 +1204,6 @@ body {
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-}
-
-.modal-auth {
   width: 717px;
 }
 
@@ -1198,13 +1223,6 @@ body {
   cursor: pointer;
 }
 
-.modal-content {
-  display: grid;
-  grid-template-columns: 137px 110px 131px 110px;
-  justify-items: start;
-  align-items: center;
-}
-
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -1216,22 +1234,30 @@ body {
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
-  grid-column: 1/-1;
-  }
+}
 
 .modal-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  grid-column: 1/2;
+}
+
+.date-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 48px;
 }
 
 .field-message {
-  display: block;
+  position: absolute;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
-  grid-column: 2/3;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .message-error {
@@ -1246,15 +1272,37 @@ body {
 }
 
 .date-field {
+  margin-left: auto;
   min-width: 440px;
   background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 60px 12px 20px;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.quantity-group {
+  display: flex;
 }
 
 .amount-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 88px;
+  margin-bottom: 48px;
+}
+
+.amount-wrap {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group-children {
+  margin-left: auto;
 }
 
 .number-field-button {
@@ -1264,6 +1312,7 @@ body {
 .number-field {
   border-radius: 0;
   padding: 14px 10px;
+  width: 32px;
 }
 
 .button-add {

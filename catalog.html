@@ -10,9 +10,9 @@
 
   <body>
     <div class="page-wrapper">
-      <header class="page-header" data-test="header">
+      <header class="page-header">
         <a class="page-header-logo" href="index.html">
-          <img class="navigation-logo" src="images\icons\logo.svg" alt="Логотип Седоны.">
+          <img class="navigation-logo" src="images/icons/logo.svg" alt="Логотип Седоны.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -44,7 +44,7 @@
         </nav>
       </header>
 
-      <main data-test="main" class="main-inner main-index">
+      <main class="main-inner main-index">
         <section class="search-form">
           <header class="search-form-header">
             <h1 class="inner-header">Гостиницы Седоны</h1>
@@ -68,8 +68,8 @@
 
           <h2 class="visually-hidden">Фильтр Гостиниц.</h2>
 
-          <form data-test="filter" class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group catalog-filter-infrastructure">
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="catalog-filter-group">
               <legend class="legend-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -96,7 +96,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-filter-group catalog-filter-type">
+            <fieldset class="catalog-filter-group">
               <legend class="legend-title">Тип Жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -126,22 +126,27 @@
             <fieldset class="catalog-filter-group catalog-filter-price">
               <legend class="legend-title">Стоимость, ₽:</legend>
               <div class="hotels-price-group">
-                <label class="price-label min-price-label" for="min-price"><span class="visually-hidden">Минимальная цена</span>от</label>
-                <input class="input-price hotels-min-price" type="number" id="min-price" name="hotels-min-price" value="0">
-                <label class="price-label max-price-label" for="max-price"><span class="visually-hidden">Максимальная цена</span>до</label>
-                <input class="input-price hotels-max-price" type="number" id="max-price" name="hotels-max-price" value="9000">
+                <div class="price-block">
+                  <label class="price-label min-price-label">
+                    <span>от</span>
+                    <input class="input-price hotels-min-price" type="text" name="hotels-min-price" value="0">
+                  </label>
+                </div>
+                <div class="price-block">
+                  <label class="price-label max-price-label">
+                    <span>до</span>
+                    <input class="input-price hotels-max-price" type="text" name="hotels-max-price" value="9000">
+                  </label>
+                </div>
               </div>
 
               <div class="range-scale">
-                <div class="range-bar" style="left: 0; width: 226px">
-                  <button class="range-toggle toggle-min">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range-toggle toggle-max">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-                </div>
-
+                <button class="range-toggle toggle-min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range-toggle toggle-max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
               </div>
             </fieldset>
 
@@ -153,7 +158,7 @@
           </form>
         </section>
 
-        <section class="catalog" data-test="catalog">
+        <section class="catalog">
           <h2 class="visually-hidden">Результаты поиска.</h2>
           <div class="catalog-headline">
             <span class="catalog-total">Найдено гостиниц: 38</span>
@@ -184,7 +189,7 @@
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images\content\amara-resort.png" alt="Amara Resort & Spa."
+                <img class="product-card-image" src="images/content/amara-resort.png" alt="Amara Resort & Spa."
                   width="300" height="212">
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
               </a>
@@ -202,7 +207,7 @@
 
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images\content\villas-at-poco-diablo.jpg"
+                <img class="product-card-image" src="images/content/villas-at-poco-diablo.jpg"
                   alt="Villas at Poco Diablo." width="300" height="212">
                 <h3 class="product-card-title">Villas at Poco Diablo</h3>
               </a>
@@ -220,7 +225,7 @@
 
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images\content\desert-quail.jpg" alt="Desert Quail Inn."
+                <img class="product-card-image" src="images/content/desert-quail.jpg" alt="Desert Quail Inn."
                   width="300" height="212">
                 <h3 class="product-card-title">Desert Quail Inn</h3>
               </a>
@@ -238,7 +243,7 @@
 
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images\content\greentree.jpg" alt="GreenTree Inn." width="300"
+                <img class="product-card-image" src="images/content/greentree.jpg" alt="GreenTree Inn." width="300"
                   height="212">
                 <h3 class="product-card-title">GreenTree Inn</h3>
               </a>
@@ -277,7 +282,7 @@
           </ul>
         </section>
 
-        <section class="subscription subscription-inner" data-test="subscribe">
+        <section class="subscription subscription-inner">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-caption">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -288,7 +293,7 @@
 
       </main>
 
-      <footer data-test="footer" class="page-footer">
+      <footer class="page-footer">
         <ul class="social-media">
           <li class="social-media-item">
             <a class="social-media-link social-vk" href="https://vk.com/htmlacademy">

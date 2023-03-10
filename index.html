@@ -11,9 +11,9 @@
 
   <body>
     <div class="page-wrapper">
-      <header class="page-header" data-test="header">
+      <header class="page-header">
         <a class="page-header-logo" href="index.html">
-          <img class="navigation-logo" src="images\icons\logo.svg" alt="Логотип Седоны.">
+          <img class="navigation-logo" src="images/icons/logo.svg" alt="Логотип Седоны.">
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -45,13 +45,13 @@
         </nav>
       </header>
 
-      <main class="main-index" data-test="main" data-test="hero">
+      <main class="main-index">
         <section class="intro">
           <h1 class="visually-hidden">Седона — небольшой городок в Аризоне.</h1>
-          <img class="intro-welcome" src="images\content\welcome.png" alt="Welcome to Sedona!" width="458" height="352">
+          <img class="intro-welcome" src="images/content/welcome.png" alt="Welcome to Sedona!" width="458" height="352">
         </section>
 
-        <section class="advantages" data-test="advantages">
+        <section class="advantages">
           <div class="advantages-headline">
             <h2 class="advantages-head">Седона — небольшой городок в&nbsp;Аризоне, заслуживающий большего!</h2>
             <p class="advantages-caption">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -62,7 +62,7 @@
               <h3 class="advantages-title">Настоящий городок</h3>
               <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantages-photo" src="images\content\town.jpg" alt="Вид городка Седона.">
+            <img class="advantages-photo" src="images/content/town.jpg" alt="Вид городка Седона.">
           </div>
           <ul class="advantages-list">
             <li class="advantages-item">
@@ -80,7 +80,7 @@
           </ul>
 
           <div class="advantages-card">
-            <img class="advantages-photo" src="images\content\bridge.jpg" alt="Виды на мост Дьявола.">
+            <img class="advantages-photo" src="images/content/bridge.jpg" alt="Виды на мост Дьявола.">
             <div class="advantages-card-content">
               <h3 class="advantages-title">Там есть<br>мост дьявола</h3>
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -97,7 +97,7 @@
           <ul class="offers-list">
             <li class="offers-card offers-card-live">
               <h3 class="offers-card-title">Жильё</h3>
-              <p class="offers-card-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
+              <p class="offers-card-description">Рекомендуем пожить<br>в&nbsp;настоящем мотеле,<br>всё как в&nbsp;кино!</p>
             </li>
             <li class="offers-card offers-card-food">
               <h3 class="offers-card-title">Еда</h3>
@@ -112,14 +112,14 @@
           </ul>
         </section>
 
-        <section class="search" data-test="search">
+        <section class="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-caption">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в
             Седоне</p>
           <a class="button button-brown" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
-        <section class="subscription" data-test="subscribe">
+        <section class="subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-caption">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -130,7 +130,7 @@
 
       </main>
 
-      <footer data-test="footer" class="page-footer">
+      <footer class="page-footer">
 
         <ul class="social-media">
           <li class="social-media-item">
@@ -180,42 +180,52 @@
 
       </footer>
     </div>
+
     <div class="modal-container modal-container-close">
-      <div class="modal modal-auth">
+      <div class="modal">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="find-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="modal-label modal-label-arrival" for="arrival-date-field">Дата Заезда:</label>
-            <input class="modal-field arrival-date-field date-field" id="arrival-date-field" type="text" name="arrival-date" placeholder="Введите дату" value="27 апреля 2020" required>
-            <p class="field-message message-error">Мы не можем отправить вас в прошлое.</p>
 
-            <label class="modal-label modal-label-leaving" for="leaving-date-field">Дата Выезда:</label>
-            <input class="modal-field leaving-date-field date-field" id="leaving-date-field" type="text" name="leaving-date" placeholder="Введите дату" value="1 сентября 2021" required>
-            <p class="field-message leaving-field-success">На эти даты есть свободные номера. Пока есть.</p>
-
-            <label class="modal-label person-number-label" for="person-number-field">Взрослые:</label>
-            <div class="amount-group">
-              <button class="number-field-button button-reduce" type="button"><span class="visually-hidden">Уменьшить.</span></button>
-              <input class="modal-field number-field number-field" id="person-number-field" type="number" step="1" min="1" name="person-number" placeholder="1" value="2" required>
-              <button class="number-field-button button-add" type="button"><span class="visually-hidden">Увеличить.</span></button>
+            <div class="date-group group-arrival">
+              <label class="modal-label modal-label-arrival" for="arrival-date">Дата Заезда:</label>
+              <input class="modal-field arrival-date-field date-field" id="arrival-date" type="text" name="arrival-date" placeholder="Введите дату" value="27 апреля 2020" required>
+              <span class="field-message message-error">Мы не можем отправить вас в прошлое.</span>
             </div>
 
-            <span class="modal-label child-number-label">
-              <label class="modal-label child-number-label" for="child-number-field">Дети:</label>
-              <span class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-amount">
-                </button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-amount">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-              </span>
-            </span>
+            <div class="date-group group-leaving">
+              <label class="modal-label modal-label-leaving" for="leaving-date">Дата Выезда:</label>
+              <input class="modal-field leaving-date-field date-field" id="leaving-date" type="text" name="leaving-date" placeholder="Введите дату" value="1 сентября 2021" required>
+              <span class="field-message leaving-field-success">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
 
             <div class="amount-group">
-              <button class="number-field-button button-reduce" type="button"><span class="visually-hidden">Уменьшить.</span></button>
-              <input class="modal-field number-field number-field" id="child-number-field" type="number" step="1" min="0" name="child-number" placeholder="1" value="2">
-              <button class="number-field-button button-add" type="button"><span class="visually-hidden">Увеличить.</span></button>
+              <div class="group-adult amount-wrap">
+                <label class="modal-label adult-number-label" for="adult-number">Взрослые:</label>
+                <div class="quantity-group">
+                  <button class="number-field-button button-reduce" type="button"></button>
+                  <input class="modal-field number-field" id="adult-number" type="text" name="adult-number" placeholder="1" value="2" required>
+                  <button class="number-field-button button-add" type="button"></button>
+                </div>
+              </div>
+
+              <div class="group-children amount-wrap">
+                <label class="modal-label child-number-label" for="child-number">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-amount">
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-amount">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+
+                <div class="quantity-group">
+                  <button class="number-field-button button-reduce" type="button"><span class="visually-hidden">Уменьшить.</span></button>
+                  <input class="modal-field number-field" id="child-number" type="text" name="child-number" placeholder="1" value="2">
+                  <button class="number-field-button button-add" type="button"><span class="visually-hidden">Увеличить.</span></button>
+                </div>
+              </div>
             </div>
 
             <button class="button button-blue" type="submit">НАЙТИ</button>
@@ -223,6 +233,7 @@
         </section>
       </div>
     </div>
+    <!-- Для показа модального окна, удалите class="modal-container-close" -->
   </body>
 
 </html>
