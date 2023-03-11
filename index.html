@@ -180,7 +180,7 @@
 
       </footer>
     </div>
-
+    <!-- Для показа модального окна, удалите class="modal-container-close" -->
     <div class="modal-container modal-container-close">
       <div class="modal">
         <button class="modal-close-button">
@@ -190,16 +190,16 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="find-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
 
-            <div class="date-group group-arrival">
+            <div class="date-group group-arrival is-invalid">
               <label class="modal-label modal-label-arrival" for="arrival-date">Дата Заезда:</label>
               <input class="modal-field arrival-date-field date-field" id="arrival-date" type="text" name="arrival-date" placeholder="Введите дату" value="27 апреля 2020" required>
               <span class="field-message message-error">Мы не можем отправить вас в прошлое.</span>
             </div>
 
-            <div class="date-group group-leaving">
+            <div class="date-group group-leaving is-valid">
               <label class="modal-label modal-label-leaving" for="leaving-date">Дата Выезда:</label>
-              <input class="modal-field leaving-date-field date-field" id="leaving-date" type="text" name="leaving-date" placeholder="Введите дату" value="1 сентября 2021" required>
-              <span class="field-message leaving-field-success">На эти даты есть свободные номера. Пока есть.</span>
+              <input class="modal-field leaving-date-field date-field" id="leaving-date" type="text" name="leaving-date" placeholder="Введите дату" value="1 сентября 2023" required>
+              <span class="field-message message-success">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
             <div class="amount-group">
@@ -233,7 +233,6 @@
         </section>
       </div>
     </div>
-    <!-- Для показа модального окна, удалите class="modal-container-close" -->
   </body>
 
 </html>

@@ -169,8 +169,8 @@ body {
 .navigation-link-favourites::after {
   content: attr(data-favourites);
   display: flex;
-  align-content: center;
   justify-content: center;
+  align-items: center;
   padding: 4px;
   position: absolute;
   min-width: 20px;
@@ -662,7 +662,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  top: 5px;
+  top: 4px;
 }
 
 .range-toggle:hover {
@@ -703,9 +703,13 @@ body {
   opacity: 0.3;
 }
 
+.control-input:focus + .control-mark {
+  box-shadow: 0 0 0 2px #83b3d3;
+}
+
 .control-input:disabled + .control-mark {
-  border: 2px solid #83B3D3;
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1190,6 +1194,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 1;
 }
 
 .modal-container-close {
@@ -1250,6 +1255,14 @@ body {
   padding-bottom: 48px;
 }
 
+.date-group.is-valid .message-success {
+  display: block;
+}
+
+.date-group.is-invalid .message-error {
+  display: block;
+}
+
 .field-message {
   position: absolute;
   font-weight: 400;
@@ -1258,6 +1271,8 @@ body {
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
+  color: #333333;
 }
 
 .message-error {
@@ -1265,6 +1280,7 @@ body {
 }
 
 .modal-field {
+  font-family: inherit;
   padding: 12px 20px;
   background: #f2f2f2;
   border-radius: 4px;
@@ -1278,7 +1294,6 @@ body {
   background-repeat: no-repeat;
   background-position: center right 20px;
   padding: 12px 60px 12px 20px;
-  margin-left: auto;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1302,7 +1317,9 @@ body {
 }
 
 .group-children {
+  position: relative;
   margin-left: auto;
+  width: 100%;
 }
 
 .number-field-button {
@@ -1313,6 +1330,9 @@ body {
   border-radius: 0;
   padding: 14px 10px;
   width: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .button-add {
@@ -1335,8 +1355,9 @@ body {
 
 .tooltip {
   position: absolute;
-  margin-top: 2px;
-  margin-left: 10px;
+  top: 10px;
+  left: 60px;
+
 }
 
 .tooltip-toggle {
