@@ -1415,6 +1415,8 @@ body {
 }
 
 .find-hotel-form .button {
+  border-radius: 10px;
+
   min-width: 577px;
   padding: 18px 77px;
   font-weight: 700;
