@@ -445,7 +445,7 @@ body {
 .subscription {
   color: #ffffff;
   background-color: #467aa4;
-  background-image: url("../images/backgrounds/subscribe.png");
+  background-image: url("../images/backgrounds/subscribe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -495,7 +495,7 @@ body {
   width: 1200px;
   color: #ffffff;
   background-color: #467aa4;
-  background-image: url("../images/backgrounds/filter.png");
+  background-image: url("../images/backgrounds/filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 70px;
@@ -1122,7 +1122,7 @@ body {
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   margin-top: auto;
   padding: 45px 70px 30px 70px;
 }
@@ -1155,6 +1155,13 @@ body {
 
 .social-media-link:active {
   color: rgba(104, 162, 202, 0.3);
+}
+
+.footer-phone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  max-width: 332px;
 }
 
 .phone-link {
